@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using Dul.Domain.Common; 
 
 namespace ManufacturerAppCore.Models
 {
@@ -10,5 +11,8 @@ namespace ManufacturerAppCore.Models
         Task<Manufacturer> GetManufacturerAsync(int id);                     // 상세
         Task<Manufacturer> EditManufacturerAsync(Manufacturer manufacturer); // 수정
         Task DeleteManufacturerAsync(int id);                                // 삭제
+
+        Task<List<Manufacturer>> GetAllAsync(int pageIndex, int pageSize);   // 페이징
+        Task<PagingResult<Manufacturer>> GetAllByPageAsync(int pageIndex, int pageSize);   // 페이징
     }
 }

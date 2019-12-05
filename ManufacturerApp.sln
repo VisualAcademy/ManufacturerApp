@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManufacturerApp", "Manufact
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_", "_", "{4CBF990B-2CD7-40BC-94C0-A38ED4924D8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManufacturerAppCore", "ManufacturerAppCore\ManufacturerAppCore.csproj", "{9640A9D3-3AB7-4203-B2CC-30FD7B1C68D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManufacturerAppCore", "ManufacturerAppCore\ManufacturerAppCore.csproj", "{9640A9D3-3AB7-4203-B2CC-30FD7B1C68D0}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "ManufacturerAppCore.SqlServer", "ManufacturerAppCore.SqlServer\ManufacturerAppCore.SqlServer.sqlproj", "{0000A0D1-287A-4B65-8A02-B30765F557A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManufacturerAppCore.Models", "ManufacturerAppCore.Models\ManufacturerAppCore.Models.csproj", "{847248A7-E3D9-46D2-A823-D9E051085F01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManufacturerAppCore.Models", "ManufacturerAppCore.Models\ManufacturerAppCore.Models.csproj", "{847248A7-E3D9-46D2-A823-D9E051085F01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManufacturerAppCore.Models.Tests", "ManufacturerAppCore.Models.Tests\ManufacturerAppCore.Models.Tests.csproj", "{DA0D8283-0724-4A97-9E10-15E64E82D782}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ManufacturerAppCore.Models.Tests", "ManufacturerAppCore.Models.Tests\ManufacturerAppCore.Models.Tests.csproj", "{DA0D8283-0724-4A97-9E10-15E64E82D782}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

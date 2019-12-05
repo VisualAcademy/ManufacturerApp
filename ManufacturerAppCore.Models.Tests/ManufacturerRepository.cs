@@ -90,6 +90,22 @@ namespace ManufacturerAppCore.Models.Tests
 
                 Assert.AreEqual(1, await context.Manufacturers.CountAsync()); 
             }
+
+            // GetAllByPageAsync() Method Test
+            using (var context = new ManufacturerDbContext(options))
+            {
+                // Empty
+            }
+            using (var context = new ManufacturerDbContext(options))
+            {
+                int pageIndex = 0;
+                int pageSize = 2; 
+
+                var repository = new ManufacturerRepository(context);
+                var manufacturers = await repository.GetAllByPageAsync(pageIndex, pageSize);
+                Assert.AreEqual(1, manufacturers.TotalRecords);
+                Assert.AreEqual(1, manufacturers.Records.ToList().Count());
+            }
         }
     }
 }

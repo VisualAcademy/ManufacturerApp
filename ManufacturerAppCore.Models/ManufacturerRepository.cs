@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Dul.Domain.Common;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -53,6 +54,30 @@ namespace ManufacturerAppCore.Models
                 _context.Manufacturers.Remove(manufacturer);
                 await _context.SaveChangesAsync(); 
             }
+        }
+
+        // 페이징
+        public async Task<List<Manufacturer>> GetAllAsync(
+            int pageIndex, int pageSize = 10)
+        {
+            return await _context.Manufacturers
+                .OrderBy(m => m.Id)
+                .Skip(pageIndex * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+        }
+
+        // 페이징 
+        public async Task<PagingResult<Manufacturer>> GetAllByPageAsync(int pageIndex, int pageSize)
+        {
+            var totalRecords = await _context.Manufacturers.CountAsync(); // 총 레코드 수
+            var manufacturers = await _context.Manufacturers
+                .OrderBy(m => m.Id)
+                .Skip(pageIndex * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return new PagingResult<Manufacturer>(manufacturers, totalRecords); // 페이징된 데이터 + 카운트
         }
     }
 }
