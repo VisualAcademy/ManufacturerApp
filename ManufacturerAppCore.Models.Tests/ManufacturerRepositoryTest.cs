@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿// Install-Package Microsoft.EntityFrameworkCore.SqlServer
+// Install-Package Microsoft.EntityFrameworkCore.InMemory
+using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Linq;
 using System.Threading.Tasks;
