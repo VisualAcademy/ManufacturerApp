@@ -52,9 +52,7 @@ else
     </table>
 }
 
-
 <ManufacturerPager Model="pager" PageIndexChanged="PageIndexChanged"></ManufacturerPager>
-
 
 <div>
     <input type="button" value="등록" 
@@ -69,6 +67,7 @@ else
 </ManufacturerEditorForm>
 
 @code {
+    // 페이저 기본값 설정
     private PagerBase pager = new PagerBase()
     {
         PageNumber = 1,
